@@ -7,11 +7,17 @@ class HelloWorld {
        System.out.println("String stored in char array: " + new String(ch));
         for(int i=0;i<ch.length;i++){
             char c = ch[i];
-           if(c == 'a'){
-               ch[i]='z';
+           if(c == 'a' && i%2==0){
+               ch[i]='b';
            }
-           else  if(c == 'z'){
+           else if(c == 'a' && i%2 != 0){
+               ch[i] = 'z';
+           }    
+           else  if(c == 'z' && i%2==0){
                ch[i]='a';
+           }
+           else  if(c == 'z' && i%2!=0){
+               ch[i]='y';
            }
            else  if(c == 'A'){
                ch[i]='Z';
